@@ -1,0 +1,21 @@
+Gestión de personal: lo primero que se desea es poder agregar personas. 
+De una persona se conoce su:
+*nombre real
+*nombre de usuario
+*contraseña
+*edad
+*cédula de identidad 
+*fecha de nacimiento; 
+
+las personas están divididas en tres grupos dentro de la organización:
+
+*Personal_administrativo: del cual se conoce adicionalmente:
+	*clave de ingreso al sistema
+	*puesto en el organigrama.
+*Investigador: del cual se conoce adicionalmente su:
+	*número de casos atendidos
+	*número de casos cerrados
+	*número de casos sin resolver. 
+*Forense: del cual se conoce adicionalmente su fecha de ingreso a la organización y su horario de trabajo.
+
+

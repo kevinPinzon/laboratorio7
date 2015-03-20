@@ -11,7 +11,7 @@ string fecha_ingreso;
 string horario;
 
 public:
-	Forence(string,string);
+	Forence(string,string,string,int,string,string, /**/ string,string);
 	virtual string toString();
 
 	string getFecha_ingreso()const;

@@ -1,4 +1,5 @@
 #include "Evidencia.h"
+#include <vector>
 
 #include <iostream>
 #include <sstream>
@@ -9,6 +10,9 @@ int opcionPersona();
 
 int main(int argc, char const *argv[]){
     int opcionMenuP;
+    vector<GestionCasos>* gestionCasos;
+    vector<Evidencia>* evidencias;
+    vector<GestionPersonal>* gestionPersonal;
     do{
         cout << "\t  ________.__                 .__                 __       ___ ___        .__                          .___                   " << endl;
         cout << "\t /   _____|  |__   ___________|  |   ____   ____ |  | __  /   |   \\  ____ |  |   _____   ____   ______ |   | ____   ____      " << endl;
@@ -18,15 +22,15 @@ int main(int argc, char const *argv[]){
         cout << "        \\/     \\/     \\/                       \\/     \\/        \\/                   \\/     \\/     \\/           \\/     \\/  \\/ " << endl;
         cout << "";
         
-        cout << "1) Gestion de Personal\n2) Gestion de Evidencia\n3) Gestion de Casos\n4) Salir\nIngrese su opcion: ";
+        cout << "1) Gestion de Personal\n2) Gestion de Evidencia\n3) Gestion de Casos\n4) Ver Caso\n5) Salir\nIngrese su opcion: ";
         cin >> opcionMenuP;
-        switch(opcionMenuP){
+        switch(opcionMenuP){//Aqui empieza 
             case 1:{
                 cout << "\t1)Personal Administrativo\n\t2)Investigador\n\t3)Forense\n\tIngrese una opcion: ";
                 int opcion;
                 cin >> opcion;
                 switch(opcion){
-                    case 1:{
+                    case 1:{//Empieza gestion de Personal
                         int opcionEditarPersona = opcionPersona();
                         switch(opcionEditarPersona){
                             case 1:{
@@ -53,7 +57,60 @@ int main(int argc, char const *argv[]){
                                         cin >> claveIngreso;
                                         cout << "Ingrese puesto de organigrama: ";
                                         cin >> puestoOrganigrama;
-                                        
+                                        GestionPersonal persona;
+                                        gestionPersonal.push_back();
+                                    }
+                                        break;
+                                    case 2:{
+                                        int casosAtendidos, casosCerrados, casosSinResolver;
+                                        cout << "Ingrese la cantidad de casos atendidos: ";
+                                        cin >> casosAtendidos;
+                                        cout << "Ingrese la cantidad de casos cerrados: ";
+                                        cin >> casosCerrados;
+                                        cout << "Ingrese la cantidad de casos sin resolver: ";
+                                        cin >> casosSinResolver;
+                                        gestionPersonal.push_back();
+                                    }
+                                        break;
+                                    case 3:{
+                                        string fechaIngreso, horarioTrabajo;
+                                        cout << "Ingrese la fecha de ingreso: ";
+                                        cin >> fechaIngreso;
+                                        cout << "Ingrese el horario de trabajo: ";
+                                        cin >> horarioTrabajo;
+                                        gestionPersonal.push_back();
+                                    }
+                                        break;
+                                    default:
+                                        cout << "Opcion invalida." << endl;
+                                        opcionEditarPersona = opcionPersona();
+                                }
+                            }
+                                break;
+                            case 2:{
+                                string nombreReal, nombreUsuario, contrasena, fechaNacimiento;
+                                int edad;
+                                long int identidad;
+                                cout << "Ingrese el nombre: ";
+                                cin >> nombreReal;
+                                cout << "Ingrese el nombre de usuario: ";
+                                cin >> nombreUsuario;
+                                cout << "Ingrese la contrasena: ";
+                                cin >> contrasena;
+                                cout << "Ingrese la edad: ";
+                                cin >> edad;
+                                cout << "Ingrese la cedula de identidad: ";
+                                cin >> identidad;
+                                cout << "Ingrese fecha de nacimiento: ";
+                                cin >> fechaNacimiento;
+                                
+                                switch(opcionEditarPersona){
+                                    case 1:{
+                                        string claveIngreso, puestoOrganigrama;
+                                        cout << "Ingrese clave de Ingreso: ";
+                                        cin >> claveIngreso;
+                                        cout << "Ingrese puesto de organigrama: ";
+                                        cin >> puestoOrganigrama;
                                     }
                                         break;
                                     case 2:{
@@ -80,12 +137,13 @@ int main(int argc, char const *argv[]){
                                 }
                             }
                                 break;
-                            case 2:{
-                                
-                            }
-                                break;
                             case 3:{
-                                
+                                for (int i = 0; i < vector.size(); ++i){
+                                    cout << i << ") " << vector[i] << endl;
+                                }
+                                cout << "Ingrese cual desea eliminar: " << endl;
+                                int eliminar;
+                                cin >> eliminar; 
                             }
                                 break;
                             default:
@@ -106,7 +164,7 @@ int main(int argc, char const *argv[]){
                 
             }
                 break;
-            case 2:{
+            case 2:{ //Empieza gestion de Evidencia
                 int opcionEditar = opcionPersona();
                 switch(opcionEditar){
                     case 1:{
@@ -128,13 +186,18 @@ int main(int argc, char const *argv[]){
                     }
                         break;
                     case 3:{
-                        
+                        for (int i = 0; i < vector.size(); ++i){
+                                    cout << i << ") " << vector[i] << endl;
+                                }
+                                cout << "Ingrese cual desea eliminar: " << endl;
+                                int eliminar;
+                                cin >> eliminar; 
                     }
                         break;
                 }
             }
                 break;
-            case 3:{
+            case 3:{ //Empieza gestion de Casos
                 if(#lista.size() < 1 ){
                     cout << "no hay investigadores"
                     break;
@@ -156,7 +219,7 @@ int main(int argc, char const *argv[]){
                         int opcionEditar = opcionPersona();
                         switch(opcionEditar){
                             case 1:{
-#vecto
+                                #vecto
                                 string nombrePrincipal, victima;
                                 char continuar = 's';
                                 string nomb;
@@ -178,7 +241,12 @@ int main(int argc, char const *argv[]){
                             }
                                 break;
                             case 3:{
-                                
+                                for (int i = 0; i < vector.size(); ++i){
+                                    cout << i << ") " << vector[i] << endl;
+                                }
+                                cout << "Ingrese cual desea eliminar: " << endl;
+                                int eliminar;
+                                cin >> eliminar; 
                             }
                                 break;
                             default: 
@@ -222,7 +290,12 @@ int main(int argc, char const *argv[]){
                             }
                                 break;
                             case 3:{
-                                
+                                for (int i = 0; i < vector.size(); ++i){
+                                    cout << i+1 << ") " << vector[i] << endl;
+                                }
+                                cout << "Ingrese cual desea eliminar: " << endl;
+                                int eliminar;
+                                cin >> eliminar;
                             }
                                 break;
                             default: 
@@ -232,6 +305,16 @@ int main(int argc, char const *argv[]){
                     }
                         break;
                     default:
+                }
+            }
+                break;
+            case 4:{
+                if(gestionCasos.size()<1){
+                    cout << "No hay casos" << endl;
+                    break;
+                }
+                for (int i = 0; i < vector.size(); ++i){
+                    cout << i+1 << ") " << gestionCasos[i].toString() << endl;
                 }
             }
                 break;

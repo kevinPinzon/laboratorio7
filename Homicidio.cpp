@@ -9,14 +9,8 @@
 using namespace std;
 
 homicidio::homicidio(int numero_caso, vector<Investigador>investigador,vector<Evidencia>evidencia, string hora ,string fecha,bool caso_cerrado
-	,vector<string> lista_nombres ,string sospechoso_principal ,string victima){
+	,vector<string> lista_nombres ,string sospechoso_principal ,string victima):GestionCasos(numero_caso, investigador,evidencia,  hora , fecha, caso_cerrado){
 
-	this->numero=numero_caso;
-	this->investigador=investigador;
-	this->evidencia=evidencia;
-	this->hora=hora;
-	this->fecha=fecha;
-	this->caso_cerrado=caso_cerrado;
 	this->lista_nombres=lista_nombres;
 	
 	this.victima->victima;

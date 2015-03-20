@@ -9,13 +9,8 @@
 using namespace std;
 
 secuestro::secuestro(int numero_caso, vector<Investigador>investigador,vector<Evidencia>evidencia, string hora ,string fecha,bool caso_cerrado,
- ,string victima,string lugar ,string motivo ,bool rescate){
- 	this->numero=numero_caso;
-	this->investigador=investigador;
-	this->evidencia-=evidencia;
-	this->hora=hora;
-	this->fecha-=fecha;
-	this->caso_cerrado=caso_cerrado;
+ ,string victima,string lugar ,string motivo ,bool rescate):GestionCasos(numero_caso, investigador,evidencia,  hora , fecha, caso_cerrado){
+
 	this->victima=victima;
 	this->lugar=lugar;
 	this->motivo=motivo;

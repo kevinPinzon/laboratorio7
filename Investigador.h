@@ -12,7 +12,7 @@ int casosCerrados;
 int casosAbiertos;
 
 public:
-	Investigador(int,int,int);
+	Investigador(string,string,string,int,string,string, /**/int,int,int);
 	virtual string toString();
 
 	int getCasosAtendidos()const;

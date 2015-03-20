@@ -7,8 +7,11 @@
 using std::string;
 using std::stringstream;
 
-Forence::Forence(string fecha_ingreso,string horario):GestionPersonal( nombreReal, 
+Forence::Forence(string nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento,
+	string fecha_ingreso,string horario):GestionPersonal( nombreReal, 
 	nombreUsuario, contrasena, edad, cedula_identidad, fecha_nacimiento){
+		this->fecha_ingreso = fecha_ingreso;
+		this->horario = horario;
 
 }
 string Forence::toString()const{

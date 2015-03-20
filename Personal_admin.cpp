@@ -6,8 +6,10 @@
 
 using std::string;
 using std::stringstream;
-
-Personal_admin::Personal_admin(string clave_ingreso, string puesto_orga):GestionPersonal( nombreReal, 
+//string,string,string,int,string,string
+//string nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento
+Personal_admin::Personal_admin(nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento, 
+	string clave_ingreso, string puesto_orga):GestionPersonal( nombreReal, 
 	nombreUsuario, contrasena, edad, cedula_identidad, fecha_nacimiento){
 
 }

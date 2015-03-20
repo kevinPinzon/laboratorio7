@@ -7,8 +7,12 @@
 using std::string;
 using std::stringstream;
 
-Investigador::Investigador(int casosAtendidos,int casosCerrados,int casosAbiertos):GestionPersonal( nombreReal, 
+Investigador::Investigador(string nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento,
+	int casosAtendidos,int casosCerrados,int casosAbiertos):GestionPersonal( nombreReal, 
 	nombreUsuario, contrasena, edad, cedula_identidad, fecha_nacimiento){
+		this->casosAtendidos = casosAtendidos;
+		this->casosCerrados = casosCerrados;
+		this->casosAbiertos = casosAbiertos;
 
 }
 string Investigador::toString()const{

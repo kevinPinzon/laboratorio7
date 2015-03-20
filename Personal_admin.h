@@ -11,7 +11,7 @@ class Personal_admin: public GestionPersonal {
 	string puesto_orga;
 
 public:
-	Personal_admin(string,string);
+	Personal_admin(string,string,string,int,string,string, /**/string,string);
 	virtual string toString()const;
 
 	string getClave_ingreso()const;

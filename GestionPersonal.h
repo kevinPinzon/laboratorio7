@@ -28,12 +28,11 @@ protected:
 	void setEdad(int);
 	void setCedula_identidad(string);
 	void setFecha_nacimiento(string);
-//hacer getters y setters----------------------------------------------------------------
 
 public:
 	GestionPersonal(string,string,string,int,string,string);
 	GestionPersonal(const GestionPersonal&);
-	virtual string toString()const;
+	virtual string toString()const=0;
 
 };
 #endif

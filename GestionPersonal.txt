@@ -16,6 +16,8 @@ las personas están divididas en tres grupos dentro de la organización:
 	*número de casos atendidos
 	*número de casos cerrados
 	*número de casos sin resolver. 
-*Forense: del cual se conoce adicionalmente su fecha de ingreso a la organización y su horario de trabajo.
+*Forense: del cual se conoce adicionalmente su: 
+fecha de ingreso a la organización 
+su horario de trabajo.
 
 

@@ -8,7 +8,7 @@
 using namespace std;
 
 
-class Homicidio : public GestionCasos{
+class secuestro : public GestionCasos{
 	string victima;
 	string lugar;
 	string motivo;
@@ -19,9 +19,10 @@ class Homicidio : public GestionCasos{
 	// caso cerrado esta en clase padre
 
 public:
-secuestro(int, vector<Investigador>,vector<Evidencia>, string,string,bool ,
+secuestro(int, vector<Investigador>*,vector<Evidencia>*, string,string,bool ,
 	string ,string ,string ,bool);
-secuestro(const Secuestro&);
+~secuestro();
+//secuestro(const Secuestro&);
 virtual string toString ()const;
 string getlugar()const;
 string getmotivo()const;

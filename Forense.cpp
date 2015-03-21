@@ -1,5 +1,6 @@
 #include "Investigador.h"
 #include "GestionPersonal.h"
+#include "Forense.h"
 
 #include <string>
 #include <sstream>
@@ -7,29 +8,32 @@
 using std::string;
 using std::stringstream;
 
-Forence::Forence(string nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento,
+Forense::Forense(string nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento,
 	string fecha_ingreso,string horario):GestionPersonal( nombreReal, 
 	nombreUsuario, contrasena, edad, cedula_identidad, fecha_nacimiento){
 		this->fecha_ingreso = fecha_ingreso;
 		this->horario = horario;
 
 }
-string Forence::toString()const{
+Forense::~Forense(){
+	GestionPersonal::~GestionPersonal();
+}
+string Forense::toString()const{
 	stringstream ss;
-	ss<<"Forence: "<<GestionPersonal::toString();
+	ss<<"Forense: "<<GestionPersonal::toString();
 	return ss.str();
 	}
 
-string Forence::getFecha_ingreso()const{
+string Forense::getFecha_ingreso()const{
 	return fecha_ingreso;
 }
-string Forence::getHorario()const{
+string Forense::getHorario()const{
 	return horario;
 }
 
-void Forence::setFecha_ingreso(string fecha_ingreso){
+void Forense::setFecha_ingreso(string fecha_ingreso){
 	this->fecha_ingreso=fecha_ingreso;
 }
-void Forence::setHorario(string horario){
+void Forense::setHorario(string horario){
 	this->horario=horario;
 }

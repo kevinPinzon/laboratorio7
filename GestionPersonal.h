@@ -21,6 +21,7 @@ protected:
 	int getEdad()const;
 	string getCedula_identidad()const;
 	string getFecha_nacimiento()const;
+	~GestionPersonal();
 
 	void setNombreReal(string);
 	void setNombreUsuario(string);
@@ -32,7 +33,7 @@ protected:
 public:
 	GestionPersonal(string,string,string,int,string,string);
 	GestionPersonal(const GestionPersonal&);
-	virtual string toString()const=0;
+	virtual string toString()const;
 
 };
 #endif

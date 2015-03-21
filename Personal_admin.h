@@ -12,6 +12,7 @@ class Personal_admin: public GestionPersonal {
 
 public:
 	Personal_admin(string,string,string,int,string,string, /**/string,string);
+	~Personal_admin();
 	virtual string toString()const;
 
 	string getClave_ingreso()const;

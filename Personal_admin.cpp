@@ -8,10 +8,16 @@ using std::string;
 using std::stringstream;
 //string,string,string,int,string,string
 //string nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento
-Personal_admin::Personal_admin(nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento, 
+Personal_admin::Personal_admin(string nombreReal,string nombreUsuario,string contrasena,int edad, string cedula_identidad,string fecha_nacimiento, 
 	string clave_ingreso, string puesto_orga):GestionPersonal( nombreReal, 
 	nombreUsuario, contrasena, edad, cedula_identidad, fecha_nacimiento){
 
+		this->clave_ingreso = clave_ingreso;
+		this->puesto_orga= puesto_orga;
+
+}
+Personal_admin::~Personal_admin(){
+	GestionPersonal::~GestionPersonal();
 }
 string Personal_admin::toString()const{
 	stringstream ss;

@@ -22,6 +22,9 @@ cedula_identidad(other.cedula_identidad),fecha_nacimiento(other.fecha_nacimiento
 {
 
 }
+GestionPersonal::~GestionPersonal(){
+	
+}
 string GestionPersonal::toString()const{
 	stringstream ss;
 	ss<<"\nnombre real: "<<nombreReal<<" con cedula de identidad: "<<cedula_identidad;

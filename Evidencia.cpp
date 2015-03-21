@@ -11,6 +11,9 @@ Evidencia::Evidencia(string nombre, string tipoObjeto, string lugar, bool huella
 	this->huellas =  huellas;
 	this->process =  process;
 }
+Evidencia::~Evidencia(){
+	
+}
 
 string Evidencia::getNombre()const{
 	return nombre;
@@ -44,8 +47,8 @@ void Evidencia::setProcess(bool process){
 	this->process = process;
 }
 
-string toString()const{
+string Evidencia::toString()const{
 	stringstream ss;
-	ss << "Nombre: " << nombre << "Tipo de Objeto: " << tipoObjeto;
+	ss << "Nombre: " << this->nombre << "Tipo de Objeto: " << this->tipoObjeto;
 	return ss.str();
 }

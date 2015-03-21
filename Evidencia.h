@@ -13,7 +13,7 @@ class Evidencia{
 	bool process;
 public:
 	Evidencia(string, string, string, bool, bool);
-
+	~Evidencia();
 	string getNombre()const;
 	string getTipoObjeto()const;
 	string getLugar()const;

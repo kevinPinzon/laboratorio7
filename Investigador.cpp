@@ -1,4 +1,4 @@
-#include "investigado.h"
+#include "Investigador.h"
 #include "GestionPersonal.h"
 
 #include <string>
@@ -14,6 +14,9 @@ Investigador::Investigador(string nombreReal,string nombreUsuario,string contras
 		this->casosCerrados = casosCerrados;
 		this->casosAbiertos = casosAbiertos;
 
+}
+Investigador::~Investigador(){
+	GestionPersonal::~GestionPersonal();
 }
 string Investigador::toString()const{
 	stringstream ss;

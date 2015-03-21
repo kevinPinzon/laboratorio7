@@ -15,8 +15,9 @@ class Homicidio : public GestionCasos{
 	string victima;
 
 public:
-homicidio(int, vector<Investigador>,vector<Evidencia>, string,string,bool,vector<string> , string ,string);
-homicidio(const homicidio&);
+Homicidio(int, vector<Investigador>*,vector<Evidencia>*, string,string,bool,vector<string> , string ,string);
+Homicidio(const Homicidio&);
+~Homicidio();
 virtual string toString()const;
 vector<string> getlista_nombres()const;
 string getsospechoso_principal()const;

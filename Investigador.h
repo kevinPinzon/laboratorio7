@@ -13,7 +13,8 @@ int casosAbiertos;
 
 public:
 	Investigador(string,string,string,int,string,string, /**/int,int,int);
-	virtual string toString();
+	virtual string toString()const;
+	~Investigador();
 
 	int getCasosAtendidos()const;
 	int getCasosCerrados()const;
